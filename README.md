@@ -29,14 +29,14 @@ All the provided codes generate adversarial examples on Inception_v3 model. If y
 
 ### Runing attack
 1. You can run our proposed attack as follows. 
-
-    python Incv3_STM_Attacks.py
-
-    Also, we provide the implementations of other baseline attack methods in our code, just change them to the corresponding attack methods in the **main()** function.
+```
+python Incv3_STM_Attacks.py
+```
+We also provide the implementations of other baseline attack methods in our code, just change them to the corresponding attack methods in the **main()** function.
 
 2. The generated adversarial examples would be stored in the directory **./incv3_xx_xx_outputs**. Then run the file **verify.py** to evaluate the success rate of each model used in the paper:
-
-    python verify.py
-
+```
+python verify.py
+```
 ## Acknowledgments
 The codes mainly references: [SSA](https://github.com/yuyang-long/SSA) and [styleAug](https://github.com/philipjackson/style-augmentation)
