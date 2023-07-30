@@ -300,7 +300,7 @@ def Admix_MI(images, gt, model, min, max):
     alpha = eps / num_iter
     momentum = opt.momentum
     portion = opt.portion
-    size = opt.size
+    size = 3
     x = images.clone().detach().cuda()
     g_t = torch.cat([torch.cat([(gt) for _ in range(size)]) for _ in range(5)]) 
     for i in range(num_iter):
