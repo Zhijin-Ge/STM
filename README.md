@@ -1,5 +1,5 @@
 # STM
-This document will show you how to use the code.
+This repository is an official implementation of the paper [Improving the Transferability of Adversarial Examples with Arbitrary Style Transfer](https://arxiv.org/abs/2308.10601), which has been accepted by ACM'MM 2023.
 
 ## Requirements
 * python == 3.7.11
