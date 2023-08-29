@@ -9,9 +9,6 @@ from loader import ImageNet
 from torch.utils.data import DataLoader
 import pretrainedmodels
 
-mean = [0.5, 0.5, 0.5]
-std = [0.5, 0.5, 0.5]
-
 batch_size = 10
 
 input_csv = './dataset/images.csv'
@@ -25,22 +22,22 @@ def get_model(net_name, model_dir):
     model_path = os.path.join(model_dir, net_name + '.npy')
 
     if net_name == 'inception_v3':
-        model = torch.nn.Sequential(Normalize(mean, std),
+        model = torch.nn.Sequential(Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5]),
                                 pretrainedmodels.inceptionv3(num_classes=1000, pretrained='imagenet').eval().cuda())
     elif net_name == 'inception_v4':
-        model = torch.nn.Sequential(Normalize(mean, std),
+        model = torch.nn.Sequential(Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5]),
                                 pretrainedmodels.inceptionv4(num_classes=1000, pretrained='imagenet').eval().cuda())
     elif net_name == 'resnet_v2_50':
-        model = torch.nn.Sequential(Normalize(mean, std),
+        model = torch.nn.Sequential(Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
                                 pretrainedmodels.resnet50(num_classes=1000, pretrained='imagenet').eval().cuda())
     elif net_name == 'resnet_v2_101':
-        model = torch.nn.Sequential(Normalize(mean, std),
+        model = torch.nn.Sequential(Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
                                 pretrainedmodels.resnet101(num_classes=1000, pretrained='imagenet').eval().cuda())
     elif net_name == 'resnet_v2_152':
-        model = torch.nn.Sequential(Normalize(mean, std),
+        model = torch.nn.Sequential(Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
                                 pretrainedmodels.resnet152(num_classes=1000, pretrained='imagenet').eval().cuda())
     elif net_name == 'inc_res_v2':
-        model = torch.nn.Sequential(Normalize(mean, std),
+        model = torch.nn.Sequential(Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5]),
                                 pretrainedmodels.inceptionresnetv2(num_classes=1000, pretrained='imagenet').eval().cuda())
     elif net_name == 'tf_adv_inception_v3':
         from torch_nets import tf_adv_inception_v3
