@@ -42,7 +42,7 @@ python verify.py
 The codes mainly references: [SSA](https://github.com/yuyang-long/SSA) and [styleAug](https://github.com/philipjackson/style-augmentation)
 
 ## Citation
-If you use this code for your research, please cite our papers.
+If you use this code for your research, please cite our paper.
 ```
 @inproceedings{ge2023improving,
      title={{Improving the Transferability of Adversarial Examples with Arbitrary Style Transfer}},
