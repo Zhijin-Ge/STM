@@ -40,3 +40,14 @@ python verify.py
 ```
 ## Acknowledgments
 The codes mainly references: [SSA](https://github.com/yuyang-long/SSA) and [styleAug](https://github.com/philipjackson/style-augmentation)
+
+## Citation
+If you use this code for your research, please cite our papers.
+```
+@inproceedings{ge2023improving,
+     title={{Improving the Transferability of Adversarial Examples with Arbitrary Style Transfer}},
+     author={Zhijin Ge and Fanhua Shang and Hongying Liu and Yuanyuan Liu and Liang Wan and Wei Feng and Xiaosen Wang},
+     booktitle={Proceedings of the ACM International Conference on Multimedia},
+     year={2023}
+}
+```
