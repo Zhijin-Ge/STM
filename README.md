@@ -17,11 +17,11 @@ This repository is an official implementation of the paper [Improving the Transf
 
 ## Qucik Start
 ### Prepare the data and models.
-We have prepared the ImageNet-compatible dataset in this program and put the data in **'./dataset/'**.
+1. We have prepared the ImageNet-compatible dataset in this program and put the data in **'./dataset/'**.
 
-The normally trained models (i.e., Inc-v3, Inc-v4, IncRes-v2, Res-50, Res-101, Res-100) are from "pretrainedmodels", if you use it for the first time, it will download the weight of the model automatically, just wait for it to finish. 
+2. The normally trained models (i.e., Inc-v3, Inc-v4, IncRes-v2, Res-50, Res-101, Res-100) are from "pretrainedmodels", if you use it for the first time, it will download the weight of the model automatically, just wait for it to finish. 
 
-The adversarially trained models (i.e, ens3_adv_inc_v3, ens4_adv_inc_v3, ens_adv_inc_res_v2) are from [SSA](https://github.com/yuyang-long/SSA) or [tf_to_torch_model](https://github.com/ylhz/tf_to_pytorch_model). For more detailed information on how to use them, visit these two repositories.
+3. The adversarially trained models (i.e, ens3_adv_inc_v3, ens4_adv_inc_v3, ens_adv_inc_res_v2) are from [SSA](https://github.com/yuyang-long/SSA) or [tf_to_torch_model](https://github.com/ylhz/tf_to_pytorch_model). For more detailed information on how to use them, visit these two repositories.
 
 ### STM Attack Method
 The traditional baseline attacks and our proposed STM attack methods are in the file __"Incv3_STM_Attacks.py"__.
